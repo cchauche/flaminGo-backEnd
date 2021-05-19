@@ -1,107 +1,92 @@
-# FlaminGo Back-end by Tonhil Hotels
-> Table of Contents
+# [FlaminGo](https://flamingo.colinchauche.com)
 
-- [Introduction](#Introduction)
-- [Technologies](#Technologies)
-- [Components](#Components)
-   - [Login Portal Page](#Login-Portal-Page)
-   - [Front desk](#Front-desk)
-   - [Housekeeping/maintenance](#Housekeeping/maintenance)
-   - [Management](#Management)
-   - [System Admin](#System-Admin)
+## Hotel Management Software
 
-- [Installation Guidelines](#Installation-Guidelines)
+![MERN Stack Logo](./readme_images/MERN-logo.png)
 
+This proof of concept app was built in 8 days by a team of 11 developers while at Hack Reactor. The client wanted an intuitive and simple app to manage the core functions of a hotel. Additionally they wanted it to have a design that emphasized the colors of the tropics where his hotel is located. Using the MERN stack we were able to build a functioning prototype that addressed all the core functionality the client asked.  Details about the scope of the project can be found in the proposal we submitted to the client [HERE](https://docs.google.com/document/d/1up5KkerC1LNrYWq7IBTEqzn4n7kVMJXNr4_95pcGyLA/edit?usp=sharing)
+
+![Flamingo Login Page](./readme_images/intro-gif.gif)
 ---
 
-## Introduction
-> 'Hotel Management Software' Developed by a team of 11 developers
-```
-We developed this project as a group over the course of 7 days during the Hack Reactor program.
-UPDATED NEEDED
-```
-* Deployed project can be found [here](URL_for_link).
+## Personal Contributions
+For this project my main contributions where: 
+- ER Diagram and Schema Design
+- RESTful API Design
+- Maintained API Documentation
+- Built the 'Reservations' Routes
+- Dockerized App for Deployment
+- Deployed App on AWS EC2
+- Set-up Caddy Server (To serve using HTTPS)
+---
+
+## Table of Contents
+- [Deployed Demo](#use-deployed-demo)
+- [Technologies](#Technologies)
+- [Figma Mock Up](#figma-mock-up)
+- [Entity Relationship Diagram](#entity-relationship-diagram)
+- [FlaminGo Backend API Documentation](#flamingo-backend-api-documentation)
+
+## Deployed Demo
+
+Deployed Demo of the app can be found at https://flamingo.colinchauche.com
+
+To use the app please use the following login credentials:
+
+### Login as Front Desk
+    u: josh123@gmail.com  
+    p: password123!
+
+### Login as Housekeeping
+    u: spencer123gmail.com  
+    p: password123!
 
 ## Technologies
->  For this project, we used the following languages and frameworks in our implementation
 
-* Front-end
+### Front-end
   + React
-    Hooks
-    Context
   + Axios
   + Webpack
   + Babel
+  + Auth0
 
-* Server
-  + Nodejs
+### Backend
+  + Node.js
   + Express
-  + Nodemon
-  + Morgan
-
-* Back-end
-  + MongoDB
   + Mongoose
+  + MongoDB
+  + Cron
 
-* Deployment
+### Deployment
   + Docker
   + AWS
+  + Caddy
 
-* Test Suite
+### Test Suite
   + Jest
   + Enzyme
 
-* Style Guide
+### Style Guide
   + ESLint with AirBNB style guide
 
-## Components
-Document can be found [here](URL_for_link).
 
-#### 0. LOGIN PORTAL PAGE
- **Main Landing Page:**
-  * This page will have a Login & Password
-  * Each user will have their own token attached which will let them have certain permissions
+## Figma Mock Up
 
-#### 1 .FRONT DESK COMPONENTS
-  * Guest Check In
-  * Guest Check Out
-  * Check Room Status
-  * Add A Reservation
+Wireframes for FlaminGo where created using Figma and can be found [HERE](https://www.figma.com/file/wa3xLQvi6io40KakWiF0BE/flamingoStyleGuide?node-id=158%3A573)
 
+## Entity Relationship Diagram
+The ER diagram was the place where we started from designing the schemas for the database. In the end the tables in the ER diagram were pretty closely matched to what showed up in our schema. There were some big changes that happened along the way as we began to consider the implications of how reservations would be made, mongoDB made it relatively easy to adapt to those changes. Though in retrospect I could have better leveraged mongoDB's ability to nest documents to reduce the complexity of some queries. 
 
-#### 2 .HOUSEKEEPING / MAINTENANCE COMPONENTS
-  * See Tasks
-  * Add Task Form
-  * Check Room Status_intergrate into front-desk component
+![Entity Relationship Diagram](./readme_images/er-diagram.png)
 
-#### 3. MANAGEMENT COMPONENTS
-  * Employee List
-  * Employee Details
-  * Timesheets
-  * Payments
+Final versions of each collection's schema for our database can be found in the [schemas](./schemas) folder.
+## FlaminGo Backend API Documentation
 
-#### 4 .SYSTEM ADMIN COMPONENTS
- **Hotel Setup for each location :**
-  * Add rooms
-  * Edit rooms
+Because of the short time we had to build the app it was essential that both the front end and the back end teams could work simultaneously.  Meaning that we couldn't have a working API for the front end to use in development and similarly we didn't have a finished front end to build for.  The API documentation was my solution to make sure that the front end team could build knowing what data to expect and what endpoints they had available while it also gave the back end team a goal to drive towards. While there were changes along the way this document facilitated those conversations and helped us catch system design issues early. 
 
-## Installation/Running Instructions
+The full API Documentation can be found [HERE](./flamingoAPI.md)
 
-### Using docker-compose
-
-  1. Clone this repo to your local machine
-  2. Follow the instructions in the ```.env.example``` to set up an auth0 account and get the necessary connection info in to a ```.env``` file.
-  3. Run ```docker-compose up -d``` in the root directory of this repository
-  4. Navigate to ***localhost:3000*** to view the site
-
-### Without Docker
-  *These instructions assume that you have mongoDB installed and running on your computer using the default configuration.  We also assume that you have Node.js installed and are running at least v14*
-  1. Clone this repo to your local machine
-  2. Navigate to the ```/db/sampleData``` directory and run the command ```mongorestore --drop --preserveUUID``` to load sample application data
-  3. Follow the instructions in the ```.env.example``` to set up an auth0 account and get the necessary connection info in to a ```.env``` file.
-  5. Navigate to the root directory of the repo and run the command ```npm install```
-  6. Once all the dependencies have installed run ```npm start```
-  7. Site will be running on ***localhost:3000***
-
+![GET Amenities Documentation Sample](./readme_images/api-docs-sample.png)
+_Sample from API Documentation_
 
 _Have a great day!_
