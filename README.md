@@ -74,6 +74,8 @@ To use the app please use the following login credentials:
 
 Wireframes for FlaminGo where created using Figma and can be found [HERE](https://www.figma.com/file/wa3xLQvi6io40KakWiF0BE/flamingoStyleGuide?node-id=158%3A573)
 
+![Figma Wireframe for Mangement](./readme_images/figma-wireframe.png)
+
 ## Entity Relationship Diagram
 The ER diagram was the place where we started from designing the schemas for the database. In the end the tables in the ER diagram were pretty closely matched to what showed up in our schema. There were some big changes that happened along the way as we began to consider the implications of how reservations would be made, mongoDB made it relatively easy to adapt to those changes. Though in retrospect I could have better leveraged mongoDB's ability to nest documents to reduce the complexity of some queries. 
 
