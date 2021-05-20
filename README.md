@@ -81,7 +81,7 @@ The ER diagram was the place where we started from designing the schemas for the
 
 ![Entity Relationship Diagram](./readme_images/er-diagram.png)
 
-Final versions of each collection's schema for our database can be found in the [schemas](./schemas) folder.
+Final versions of each collection's schema for our database can be found in the [schemas](./db/schemas) folder.
 ## FlaminGo Backend API Documentation
 
 Because of the short time we had to build the app it was essential that both the front end and the back end teams could work simultaneously.  Meaning that we couldn't have a working API for the front end to use in development and similarly we didn't have a finished front end to build for.  The API documentation was my solution to make sure that the front end team could build knowing what data to expect and what endpoints they had available while it also gave the back end team a goal to drive towards. While there were changes along the way this document facilitated those conversations and helped us catch system design issues early. 
