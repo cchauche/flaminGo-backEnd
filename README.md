@@ -27,20 +27,6 @@ For this project my main contributions where:
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [FlaminGo Backend API Documentation](#flamingo-backend-api-documentation)
 
-## Deployed Demo
-
-Deployed Demo of the app can be found at https://flamingo.colinchauche.com
-
-To use the app please use the following login credentials:
-
-### Login as Front Desk
-    u: josh123@gmail.com  
-    p: password123!
-
-### Login as Housekeeping
-    u: spencer123gmail.com  
-    p: password123!
-
 ## Technologies
 
 ### Front-end
