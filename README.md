@@ -21,7 +21,6 @@ For this project my main contributions where:
 ---
 
 ## Table of Contents
-- [Deployed Demo](#use-deployed-demo)
 - [Technologies](#Technologies)
 - [Figma Mock Up](#figma-mock-up)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
